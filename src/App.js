@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Account } from './components/Accounts';
+import Signup from './components/SignUp';
+import Login from './components/Login';
+import Status from './components/Status';
+import MFA from './components/MFA';
 
-function App() {
+export default () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Account>
+      <Status />
+      <Signup />
+      <Login />
+      <MFA />
+    </Account>
   );
-}
+};
 
-export default App;
+
+
